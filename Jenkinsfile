@@ -7,12 +7,12 @@ pipeline{
     stages{
         stage('build') {
             steps {
-                sh 'pip install -r requirements.txt'
+                bat 'pip install -r requirements.txt'
             }
         }
         stage('test'){
             steps {
-                sh 'python test.py'
+                bat 'python test.py'
             }
             post {
                 always {
